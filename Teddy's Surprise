@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveBox — The Secret Between Us 36 🌙👀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL STYLES & VARIABLES --- */
+        :root {
+            --bg-color: #0d001a;
+            --primary-color: #bb86fc; /* Deep purple highlight */
+            --secondary-color: #ff8c94; /* Soft pink for text/glow */
+            --white: #ffffff;
+            --font-elegant: 'Lobster Two', cursive; /* Updated for readability */
+            --font-body: 'Poppins', sans-serif;
+            --transition-speed: 0.5s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ff8c94" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'), auto;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-weight: 400; /* Increased default weight for body text */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- BACKGROUND EFFECTS --- */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            opacity: 0.7;
+            text-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--primary-color);
+            animation: float-sparkle 15s infinite alternate ease-in-out;
+        }
+
+        @keyframes float-sparkle {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0.7; }
+            50% { transform: translate(50px, -50px) rotate(180deg); opacity: 0.85; }
+            100% { transform: translate(-20px, 30px) rotate(360deg); opacity: 0.7; }
+        }
+
+        /* Initial positions for stars */
+        .star:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; font-size: 2rem; }
+        .star:nth-child(2) { top: 30%; right: 10%; animation-delay: 2s; font-size: 1.5rem; }
+        .star:nth-child(3) { bottom: 20%; left: 15%; animation-delay: 4s; }
+        .star:nth-child(4) { bottom: 5%; right: 30%; animation-delay: 6s; font-size: 2.5rem; }
+        .star:nth-child(5) { top: 50%; left: 50%; animation-delay: 8s; }
+        .star:nth-child(6) { bottom: 40%; right: 5%; animation-delay: 10s; font-size: 1.8rem; }
+
+
+        /* --- SHARED COMPONENTS --- */
+        .container {
+            flex-grow: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section {
+            min-height: 80vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .section.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-family: var(--font-elegant);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: var(--secondary-color);
+            text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 400; /* Adjusted for Poppins */
+            margin-bottom: 40px;
+            color: var(--white);
+        }
+
+        /* Glowing Button Style */
+        .glowing-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-family: var(--font-body);
+            font-weight: 700
